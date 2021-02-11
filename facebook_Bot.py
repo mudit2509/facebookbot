@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Feb 12 00:58:46 2021
-
-@author: mudit
-"""
-
 import sys
 import time
 
@@ -24,14 +17,14 @@ options.add_experimental_option("prefs", prefs)
 #options.add_argument('--user-data-dir=<Put your Chrome App Data dir>')
 options.add_argument('--profile-directory=Default')
   
-driver = webdriver.Chrome('place executable chromedriver path', chrome_options=options)
+driver = webdriver.Chrome('C:\\Users\\mudit\\Desktop\python_codes\python_automation\chromedriver.exe', chrome_options=options)
 driver.maximize_window()
 driver.get(url)
 
 time.sleep(2)
 
-usrnm = '<username>'
-paswrd = '<password>'
+usrnm = 'firstlastdot.fl@gmail.com'
+paswrd = 'RameshKatiyar@1234'
 
 def show_exception(e) :
     print(e)
@@ -73,13 +66,13 @@ def profile_page() :
         show_exception(e)
 
 
-friends = '<username>'
+friends = '100008889526122'
 try :
 
     url = 'https://www.facebook.com/{}'
     driver.get(url.format(friends))
     time.sleep(5)
-    print('visited profile of <friendusername>')
+    print('visited profile of mudit kumar')
         
     add_xpath = '//*[@id="mount_0_0"]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div/div[3]/div/div/div/div[2]/div/div/div/div[1]/div/div'
     add_btn = driver.find_element_by_xpath(add_xpath)
@@ -139,7 +132,7 @@ try :
     time.sleep(15)
     
 
-    driver.get('https://www.facebook.com/<friend_username>/friends')
+    driver.get('https://www.facebook.com/rames.katiyar.9/friends')
     print('friends tab opened by driver')
     time.sleep(10)
     
@@ -148,10 +141,10 @@ try :
     golu = driver.find_element_by_xpath(golu_name)
     golu.click()
     time.sleep(20)
-    print('<friend_username> selected as the third random friend')
+    print('Golu selected as the third random friend')
     lpp = '//*[@id="mount_0_0"]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div/div[4]/div[2]/div/div[2]/div[3]/div[1]/div/div/div/div/div/div/div/div/div/div/div[2]/div/div[4]/div/div/div[2]/div[5]/div[2]/div[1]/div/div/div/form/div/div/div[2]/div/div/div/div/span'
     latest_post = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH,lpp)))
-    cmnt = 'Hii friend!...I am a Bot'
+    cmnt = 'Hii Golu Gupta!...I am mudit\'s Bot'
     latest_post.send_keys(cmnt)
     time.sleep(5)
     print('comment entered')
@@ -166,4 +159,5 @@ except NoSuchElementException as e :
     show_exception(e)
 except Exception as e :
     show_exception(e)
+    
     
