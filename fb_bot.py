@@ -37,7 +37,7 @@ def login_fb(username,pswrd) :
         time.sleep(1)
         driver.find_element_by_id('pass').send_keys(pswrd)
         time.sleep(1)
-        driver.find_element_by_id('u_0_d').click()
+        driver.find_element_by_name('login').click()
         print('Logged in succesfully')
     except NoSuchElementException as e :
         show_exception(e)
