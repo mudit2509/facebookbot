@@ -70,7 +70,7 @@ def profile_page() :
 
 friends = '100006757126835'
 try :
-    '''
+    
     url = 'https://www.facebook.com/{}'
     driver.get(url.format(friends))
     time.sleep(5)
@@ -127,7 +127,7 @@ try :
     time.sleep(5)
     print('home btn clicked')
     
-'''
+
     #posting on timeline of a random friend
     print('posting on timeline of a random friend')
     profile_page()
