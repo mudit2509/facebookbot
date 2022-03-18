@@ -23,8 +23,8 @@ driver.get(url)
 
 time.sleep(2)
 
-usrnm = 'firstlastdot.fl@gmail.com'
-paswrd = 'RameshKatiyar@1234'
+usrnm = ''
+paswrd = ''
 
 def show_exception(e) :
     print(e)
